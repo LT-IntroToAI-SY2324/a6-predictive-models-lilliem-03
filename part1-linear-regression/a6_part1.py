@@ -8,7 +8,7 @@ x = data["Age"]
 y = data["Blood Pressure"]
 
 # Use reshape to turn the x values into 2D arrays:
-#x = x.reshape(-1,1)
+x = x.reshape(-1,1)
 
 # Create the model
 plt.figure(figsize=(6,4))
