@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 data = pd.read_csv("part1-linear-regression/blood_pressure_data.csv")
-x = data["Age"]
-y = data["Blood Pressure"]
+x = data["Age"].values
+y = data["Blood Pressure"].values
 
 # Use reshape to turn the x values into 2D arrays:
 x = x.reshape(-1,1)
-
+model = LinearRegression().fit(x, y)
 # Create the model
 plt.figure(figsize=(6,4))
 model = LinearRegression().fit(x,y)
@@ -33,7 +33,12 @@ plt.scatter(x,y)
 plt.xlabel("Age")
 plt.ylabel("Blood Pressure")
 plt.title("Age vs. Blood Pressure")
+print("the Linear Regression equation is " + str(2))
+print("the R squared value is " + str(r_squared))
+x_predict = 43
+prediction = model.predict([[x_predict]])
+print("My prediction is " + str(prediction))
+plt.plot(x, coef*x + intercept, c="r", label = "line of best fit")
 
-print(f"Correlation between Temperature and Chirps/Min: {x.corr(y)}")
 
 plt.show()

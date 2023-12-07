@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 **********CREATE THE MODEL**********
 '''
 
-data = pd.read_csv("data.csv")
+data = pd.read_csv("part1-linear-regression/blood_pressure_data.csv")
 x = data["Age"].values
 y = data["Blood Pressure"].values
 print(x,y)
@@ -50,3 +50,15 @@ print("x value:", float(x_coord), "Predicted Y Value: ", predicted_y, "Actual Y 
 '''
 **********CREATE A VISUAL OF THE RESULTS**********
 '''
+plt.figure(figsize=(5,4))
+
+plt.scatter(xtrain, ytrain, c="purple", label="Training Data")
+plt.scatter(xtest, ytest, c="blue", label="Testing DAata")
+
+plt.xlabel("Age")
+plt.ylabel("Blood Pressure")
+plt.title("Blood Pressure by age")
+plt.plot(x, coef*x + intercept, c="r", label="Predicted Blood Pressure for age")
+
+plt.legend()
+plt.show()
