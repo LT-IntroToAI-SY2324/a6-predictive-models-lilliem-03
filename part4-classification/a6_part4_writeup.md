@@ -14,5 +14,5 @@ I think that yes it is accurate enough because the accuracy is at 0.82 whihc is 
 The model was pretty accurate with a few moments where is would predict Iris-setose and the actualy species Iris-virginica.
 
 4. Would a 34 year old Female who makes 56000 a year buy an SUV according to the model? Remember to scale the data before running it through the model.
-
+No it would not make sense for the lady to buy an SUV model.
 
