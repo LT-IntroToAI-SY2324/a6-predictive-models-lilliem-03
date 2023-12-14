@@ -28,8 +28,8 @@ for i in range(k):
     plt.scatter(cluster[:, 0], cluster[:,1])
 
 #plot the centroids
-plt.scatter(centroids[:, 0], centroids[:,1], marker = 'x', s=100
-            c="'r", label = 'centroid')
+plt.scatter(centroids[:, 0], centroids[:,1], marker = 'x', s=100,
+            c='r', label = 'centroid')
             
 #shows the graph
 plt.xlabel("Annual Income")
